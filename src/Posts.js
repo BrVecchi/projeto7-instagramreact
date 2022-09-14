@@ -1,35 +1,54 @@
+import {
+  BookmarkOutline,
+  ChatbubbleOutline,
+  EllipsisHorizontalOutline,
+  HappyOutline,
+  HeartOutline,
+  PaperPlaneOutline,
+} from "react-ionicons";
+
+import videoMP4 from "./videos/video.mp4";
+import videoOGG from "./videos/video.ogg";
+import ursocrazy from "./imgs/topo-feed/ursocrazy 2.png";
+import respondeAi from "./imgs/usuarios/respondeai 2.png";
+import barked from "./imgs/topo-feed/barked 2.png";
+import dog from "./imgs/feed/dog 1.png";
+import adorableAnimals from "./imgs/usuarios/adorableanimals 2.png";
+import meowed from "./imgs/topo-feed/meowed 2.png";
+import gatoTelefone from "./imgs/feed/gato-telefone 1.png";
+
 export default function Posts() {
   const posts = [
     <div class="feed">
       <div class="topo-feed">
         <div class="usuario-info">
           <div class="usuario-info-img">
-            <img src="./imgs/topo-feed/ursocrazy 2.png" />
+            <img src={ursocrazy} />
           </div>
           <p>crazybear</p>
         </div>
-        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+        <EllipsisHorizontalOutline class="ion-icon" />
       </div>
       <div class="foto-feed">
         <video width="100%" autoplay muted>
-          <source src="./videos/video.mp4" type="video/mp4" />
-          <source src="./videos/video.ogg" type="video/ogg" />
+          <source src={videoMP4} type="video/mp4" />
+          <source src={videoOGG} type="video/ogg" />
           Your browser does not support HTML video.
         </video>
       </div>
       <div class="bot-feed">
         <div class="icones-feed">
           <div class="icones-feed-esquerda">
-            <ion-icon name="heart-outline"></ion-icon>
-            <ion-icon name="chatbubble-outline"></ion-icon>
-            <ion-icon name="paper-plane-outline"></ion-icon>
+            <HeartOutline class="ion-icon" />
+            <ChatbubbleOutline class="ion-icon" />
+            <PaperPlaneOutline class="ion-icon" />
           </div>
           <div class="icones-feed-direta">
-            <ion-icon name="bookmark-outline"></ion-icon>
+            <BookmarkOutline class="ion-icon" />
           </div>
         </div>
         <div class="curtidas-feed">
-          <img src="./imgs/usuarios/respondeai 2.png" />
+          <img src={respondeAi} />
           <p>
             Curtido por<pre> </pre>
             <p class="negrito">respondeai</p>
@@ -51,13 +70,13 @@ export default function Posts() {
             <div class="texto-comentario">Que vídeo bacana!</div>
           </div>
           <button class="botao-comentario">
-            <ion-icon name="heart-outline"></ion-icon>
+            <HeartOutline class="ion-icon" />
           </button>
         </div>
         <div class="escrever-comentario"></div>
       </div>
       <div class="input-comentario">
-        <ion-icon class="icone-comentario" name="happy-outline"></ion-icon>
+        <HappyOutline class="icone-comentario ion-icon" />
         <input type="text" placeholder="Add um comentário..." />
         <p class="publicar">Publicar</p>
       </div>
@@ -66,28 +85,28 @@ export default function Posts() {
       <div class="topo-feed">
         <div class="usuario-info">
           <div class="usuario-info-img">
-            <img src="./imgs/topo-feed/barked 2.png" />
+            <img src={barked} />
           </div>
           <p>barked</p>
         </div>
-        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+        <EllipsisHorizontalOutline class="ion-icon" />
       </div>
       <div class="foto-feed">
-        <img src="./imgs/feed/dog 1.png" />
+        <img src={dog} />
       </div>
       <div class="bot-feed">
         <div class="icones-feed">
           <div class="icones-feed-esquerda">
-            <ion-icon name="heart-outline"></ion-icon>
-            <ion-icon name="chatbubble-outline"></ion-icon>
-            <ion-icon name="paper-plane-outline"></ion-icon>
+            <HeartOutline class="ion-icon" />
+            <ChatbubbleOutline class="ion-icon" />
+            <PaperPlaneOutline class="ion-icon" />
           </div>
           <div class="icones-feed-direta">
-            <ion-icon name="bookmark-outline"></ion-icon>
+            <BookmarkOutline class="ion-icon" />
           </div>
         </div>
         <div class="curtidas-feed">
-          <img src="./imgs/usuarios/adorableanimals 2.png" />
+          <img src={adorableAnimals} />
           <p>
             Curtido por <pre> </pre>
             <p class="negrito">adorable_animals</p>
@@ -109,13 +128,13 @@ export default function Posts() {
             <div class="texto-comentario">Que fofo esse dog!</div>
           </div>
           <button class="botao-comentario">
-            <ion-icon name="heart-outline"></ion-icon>
+            <HeartOutline class="ion-icon" />
           </button>
         </div>
         <div class="escrever-comentario"></div>
       </div>
       <div class="input-comentario">
-        <ion-icon class="icone-comentario" name="happy-outline"></ion-icon>
+        <HappyOutline class="icone-comentario ion-icon" />
         <input type="text" placeholder="Add um comentário..." />
         <p class="publicar">Publicar</p>
       </div>
@@ -124,28 +143,28 @@ export default function Posts() {
       <div class="topo-feed">
         <div class="usuario-info">
           <div class="usuario-info-img">
-            <img src="./imgs/topo-feed/meowed 2.png" />
+            <img src={meowed} />
           </div>
           <p>meowed</p>
         </div>
-        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+        <EllipsisHorizontalOutline class="ion-icon" />
       </div>
       <div class="foto-feed">
-        <img src="./imgs/feed/gato-telefone 1.png" />
+        <img src={gatoTelefone} />
       </div>
       <div class="bot-feed">
         <div class="icones-feed">
           <div class="icones-feed-esquerda">
-            <ion-icon name="heart-outline"></ion-icon>
-            <ion-icon name="chatbubble-outline"></ion-icon>
-            <ion-icon name="paper-plane-outline"></ion-icon>
+            <HeartOutline class="ion-icon" />
+            <ChatbubbleOutline class="ion-icon" />
+            <PaperPlaneOutline class="ion-icon" />
           </div>
           <div class="icones-feed-direta">
-            <ion-icon name="bookmark-outline"></ion-icon>
+            <BookmarkOutline class="ion-icon" />
           </div>
         </div>
         <div class="curtidas-feed">
-          <img src="./imgs/usuarios/respondeai 2.png" />
+          <img src={respondeAi} />
           <p>
             Curtido por <pre> </pre>
             <p class="negrito">respondeai</p>
@@ -167,13 +186,13 @@ export default function Posts() {
             <div class="texto-comentario">Está assintindo algo bom.. :)</div>
           </div>
           <button class="botao-comentario">
-            <ion-icon name="heart-outline"></ion-icon>
+            <HeartOutline class="ion-icon" />
           </button>
         </div>
         <div class="escrever-comentario"></div>
       </div>
       <div class="input-comentario">
-        <ion-icon class="icone-comentario" name="happy-outline"></ion-icon>
+        <HappyOutline class="icone-comentario ion-icon" />
         <input type="text" placeholder="Add um comentário..." />
         <p class="publicar">Publicar</p>
       </div>

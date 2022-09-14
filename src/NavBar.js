@@ -6,23 +6,24 @@ import {
   PaperPlaneOutline,
   PersonOutline,
 } from "react-ionicons";
+import logo from "./imgs/logo.png";
 export default function NavBar() {
   return (
     <div class="navBar">
       <div class="navBar-usual">
         <div class="logo-navBar">
-          <LogoInstagram class="icone-navBar" />
+          <LogoInstagram class="icone-navBar ion-icon" />
           <div class="linha-vertical"></div>
-          <img src="./imgs/logo.png" />
+          <img src={logo} />
         </div>
         <div class="pesquisar-navBar">
           <input type="text" placeholder="Pesquisar" />
         </div>
         <div class="icones-navBar">
-          <PaperPlaneOutline class="icone-navBar" />
-          <CompassOutline class="icone-navBar" />
-          <HeartOutline class="icone-navBar" />
-          <PersonOutline class="icone-navBar" />
+          <PaperPlaneOutline class="icone-navBar ion-icon" />
+          <CompassOutline class="icone-navBar ion-icon" />
+          <HeartOutline class="icone-navBar ion-icon" />
+          <PersonOutline class="icone-navBar ion-icon" />
         </div>
       </div>
     </div>
