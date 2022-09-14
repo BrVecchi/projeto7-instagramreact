@@ -69,9 +69,9 @@ export default function Stories() {
     </div>,
   ];
   return (
-    <div class="stories">
+    <div class="stories-box">
       <img class="flecha" src={flecha} />
-      <ul>
+      <ul class="stories">
         {stories.map((story) => (
           <li>{story}</li>
         ))}

@@ -1,11 +1,19 @@
+import {
+  AddCircleOutline,
+  HeartOutline,
+  Home,
+  PersonOutline,
+  SearchOutline,
+} from "react-ionicons";
+
 export default function BotMobile() {
   return (
     <div class="bot-mobile">
-      <ion-icon name="home"></ion-icon>
-      <ion-icon name="search-outline"></ion-icon>
-      <ion-icon name="add-circle-outline"></ion-icon>
-      <ion-icon name="heart-outline"></ion-icon>
-      <ion-icon name="person-outline"></ion-icon>
+      <Home />
+      <SearchOutline />
+      <AddCircleOutline />
+      <HeartOutline />
+      <PersonOutline />
     </div>
   );
 }

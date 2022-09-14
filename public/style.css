@@ -10,6 +10,7 @@ body {
 
 .linha-vertical {
   margin-right: 11px;
+  margin-left: 11px;
   width: 1px;
   height: 22px;
   border-left: 1px solid #dbdbdb;
@@ -70,7 +71,12 @@ body {
 .icone-navBar {
   width: 22px;
   height: 22px;
-  margin: 0 11px;
+  margin-right: 11px;
+}
+.icones-navBar {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
 }
 
 ::placeholder {
@@ -100,17 +106,26 @@ body {
   z-index: 1;
   border-radius: 32px;
 }
+
+.stories-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 614px;
+  height: 118px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 88px;
+  background-color: white;
+  border: 1px solid #dbdbdb;
+}
+
 .stories {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   background-color: white;
-  margin-top: 88px;
-  width: 614px;
-  height: 118px;
   font-size: 12px;
-  overflow: hidden;
-  position: relative;
-  border: 1px solid #dbdbdb;
 }
 
 .stories-img {
@@ -154,6 +169,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  margin-right: 16px;
 }
 
 .usuario-info {
@@ -188,18 +204,26 @@ body {
 .icones-feed {
   display: flex;
   justify-content: space-between;
-  margin-left: 8px;
 }
 
+.icones-feed-esquerda {
+  margin-left: 16px;
+  display: flex;
+  justify-content: space-between;
+  width: 75px;
+}
+.icones-feed-direita {
+  margin-right: 16px;
+}
 .curtidas-feed {
   display: flex;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 16px;
   margin-left: 16px;
 }
 
 .curtidas-feed img {
-  margin-right: 2px;
+  margin-right: 8px;
 }
 
 .bot-feed {
@@ -213,7 +237,7 @@ body {
   width: 100%;
 }
 .comentarios .sugestoes {
-  margin-inline: 16px 12px;
+  margin-inline: 16px 16px;
 }
 
 .sugestoes .ver-tudo:hover {
@@ -252,7 +276,8 @@ body {
   justify-content: space-between;
   height: 40px;
   align-items: center;
-  margin-inline: 8px 12px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .input-comentario input {
@@ -260,17 +285,11 @@ body {
   border: unset;
 }
 
-.botao-comentario {
-  background-color: unset;
-  border: unset;
+.icone-coracao {
+  margin-right: 16px;
 }
 
-.botao-comentario ion-icon {
-  height: 16px;
-  width: 16px;
-}
-
-.botao-comentario ion-icon:hover {
+.icone-coracao:hover {
   cursor: pointer;
 }
 
@@ -426,14 +445,18 @@ ion-icon {
   .flecha {
     display: none;
   }
-  .stories {
+
+  .stories-box {
     width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    background-color: unset;
     margin-top: 54px;
+    background-color: unset;
     overflow-x: auto;
   }
+
+  .stories {
+    background-color: unset;
+  }
+
   .feed {
     width: 100%;
     height: auto;

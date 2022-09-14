@@ -27,7 +27,7 @@ export default function Posts() {
           </div>
           <p>crazybear</p>
         </div>
-        <EllipsisHorizontalOutline class="ion-icon" />
+        <EllipsisHorizontalOutline />
       </div>
       <div class="foto-feed">
         <video width="100%" autoplay muted>
@@ -39,22 +39,20 @@ export default function Posts() {
       <div class="bot-feed">
         <div class="icones-feed">
           <div class="icones-feed-esquerda">
-            <HeartOutline class="ion-icon" />
-            <ChatbubbleOutline class="ion-icon" />
-            <PaperPlaneOutline class="ion-icon" />
+            <HeartOutline />
+            <ChatbubbleOutline />
+            <PaperPlaneOutline />
           </div>
-          <div class="icones-feed-direta">
-            <BookmarkOutline class="ion-icon" />
+          <div class="icones-feed-direita">
+            <BookmarkOutline />
           </div>
         </div>
         <div class="curtidas-feed">
           <img src={respondeAi} />
-          <p>
-            Curtido por<pre> </pre>
-            <p class="negrito">respondeai</p>
-            <pre> </pre> e<pre> </pre>
-            <p class="negrito">outras 101.523 pessoas</p>
-          </p>
+          <div class="texto">
+            Curtido por <span class="strong">loucuratotales</span> e{" "}
+            <span class="strong">outras 98.432 pessoas</span>
+          </div>
         </div>
       </div>
       <div class="comentarios">
@@ -69,14 +67,14 @@ export default function Posts() {
             </div>
             <div class="texto-comentario">Que vídeo bacana!</div>
           </div>
-          <button class="botao-comentario">
-            <HeartOutline class="ion-icon" />
-          </button>
+          <div class="icone-coracao">
+            <HeartOutline />
+          </div>
         </div>
         <div class="escrever-comentario"></div>
       </div>
       <div class="input-comentario">
-        <HappyOutline class="icone-comentario ion-icon" />
+        <HappyOutline />
         <input type="text" placeholder="Add um comentário..." />
         <p class="publicar">Publicar</p>
       </div>
@@ -89,7 +87,7 @@ export default function Posts() {
           </div>
           <p>barked</p>
         </div>
-        <EllipsisHorizontalOutline class="ion-icon" />
+        <EllipsisHorizontalOutline />
       </div>
       <div class="foto-feed">
         <img src={dog} />
@@ -97,22 +95,20 @@ export default function Posts() {
       <div class="bot-feed">
         <div class="icones-feed">
           <div class="icones-feed-esquerda">
-            <HeartOutline class="ion-icon" />
-            <ChatbubbleOutline class="ion-icon" />
-            <PaperPlaneOutline class="ion-icon" />
+            <HeartOutline />
+            <ChatbubbleOutline />
+            <PaperPlaneOutline />
           </div>
-          <div class="icones-feed-direta">
-            <BookmarkOutline class="ion-icon" />
+          <div class="icones-feed-direita">
+            <BookmarkOutline />
           </div>
         </div>
         <div class="curtidas-feed">
           <img src={adorableAnimals} />
-          <p>
-            Curtido por <pre> </pre>
-            <p class="negrito">adorable_animals</p>
-            <pre> </pre> e<pre> </pre>
-            <p class="negrito">outras 99.159 pessoas</p>
-          </p>
+          <div class="texto">
+            Curtido por <span class="strong">adorableanimals</span> e{" "}
+            <span class="strong">outras 99.547 pessoas</span>
+          </div>
         </div>
       </div>
       <div class="comentarios">
@@ -127,9 +123,9 @@ export default function Posts() {
             </div>
             <div class="texto-comentario">Que fofo esse dog!</div>
           </div>
-          <button class="botao-comentario">
-            <HeartOutline class="ion-icon" />
-          </button>
+          <div class="icone-coracao">
+            <HeartOutline />
+          </div>
         </div>
         <div class="escrever-comentario"></div>
       </div>
@@ -147,7 +143,7 @@ export default function Posts() {
           </div>
           <p>meowed</p>
         </div>
-        <EllipsisHorizontalOutline class="ion-icon" />
+        <EllipsisHorizontalOutline />
       </div>
       <div class="foto-feed">
         <img src={gatoTelefone} />
@@ -155,22 +151,20 @@ export default function Posts() {
       <div class="bot-feed">
         <div class="icones-feed">
           <div class="icones-feed-esquerda">
-            <HeartOutline class="ion-icon" />
-            <ChatbubbleOutline class="ion-icon" />
-            <PaperPlaneOutline class="ion-icon" />
+            <HeartOutline />
+            <ChatbubbleOutline />
+            <PaperPlaneOutline />
           </div>
-          <div class="icones-feed-direta">
-            <BookmarkOutline class="ion-icon" />
+          <div class="icones-feed-direita">
+            <BookmarkOutline />
           </div>
         </div>
         <div class="curtidas-feed">
           <img src={respondeAi} />
-          <p>
-            Curtido por <pre> </pre>
-            <p class="negrito">respondeai</p>
-            <pre> </pre> e<pre> </pre>
-            <p class="negrito">outras 101.523 pessoas</p>
-          </p>
+          <div class="texto">
+            Curtido por <span class="strong">respondeai</span> e{" "}
+            <span class="strong">outras 101.523 pessoas</span>
+          </div>
         </div>
       </div>
       <div class="comentarios">
@@ -185,9 +179,9 @@ export default function Posts() {
             </div>
             <div class="texto-comentario">Está assintindo algo bom.. :)</div>
           </div>
-          <button class="botao-comentario">
-            <HeartOutline class="ion-icon" />
-          </button>
+          <div class="icone-coracao">
+            <HeartOutline />
+          </div>
         </div>
         <div class="escrever-comentario"></div>
       </div>

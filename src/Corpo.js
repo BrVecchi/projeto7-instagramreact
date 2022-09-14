@@ -10,8 +10,8 @@ export default function Corpo() {
         <Stories />
         <Posts />
         <BotMobile />
-        <SideBar />
       </div>
+      <SideBar />
     </div>
   );
 }

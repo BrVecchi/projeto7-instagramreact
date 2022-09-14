@@ -2,7 +2,6 @@ import {
   CompassOutline,
   HeartOutline,
   LogoInstagram,
-  LogoIonic,
   PaperPlaneOutline,
   PersonOutline,
 } from "react-ionicons";
@@ -12,7 +11,7 @@ export default function NavBar() {
     <div class="navBar">
       <div class="navBar-usual">
         <div class="logo-navBar">
-          <LogoInstagram class="icone-navBar ion-icon" />
+          <LogoInstagram />
           <div class="linha-vertical"></div>
           <img src={logo} />
         </div>
@@ -20,10 +19,10 @@ export default function NavBar() {
           <input type="text" placeholder="Pesquisar" />
         </div>
         <div class="icones-navBar">
-          <PaperPlaneOutline class="icone-navBar ion-icon" />
-          <CompassOutline class="icone-navBar ion-icon" />
-          <HeartOutline class="icone-navBar ion-icon" />
-          <PersonOutline class="icone-navBar ion-icon" />
+          <PaperPlaneOutline />
+          <CompassOutline />
+          <HeartOutline />
+          <PersonOutline />
         </div>
       </div>
     </div>
