@@ -30,7 +30,7 @@ export default function Posts() {
         <EllipsisHorizontalOutline />
       </div>
       <div class="foto-feed">
-        <video width="100%" autoplay muted>
+        <video width="100%" autoPlay muted>
           <source src={videoMP4} type="video/mp4" />
           <source src={videoOGG} type="video/ogg" />
           Your browser does not support HTML video.

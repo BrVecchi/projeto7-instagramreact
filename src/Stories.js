@@ -69,13 +69,11 @@ export default function Stories() {
     </div>,
   ];
   return (
-    <div class="stories-box">
+    <ul class="stories">
       <img class="flecha" src={flecha} />
-      <ul class="stories">
-        {stories.map((story) => (
-          <li>{story}</li>
-        ))}
-      </ul>
-    </div>
+      {stories.map((story) => (
+        <li>{story}</li>
+      ))}
+    </ul>
   );
 }

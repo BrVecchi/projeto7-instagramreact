@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #fafafa;
   height: 2000px;
@@ -34,6 +38,7 @@ body {
   align-items: center;
   width: 936px;
   height: 54px;
+  margin: 0 16px 0 16px;
 }
 
 .navBar-mobile {
@@ -47,6 +52,8 @@ body {
   height: 54px;
   background-color: white;
   z-index: 2;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 .bot-mobile {
@@ -68,11 +75,6 @@ body {
   align-items: center;
 }
 
-.icone-navBar {
-  width: 22px;
-  height: 22px;
-  margin-right: 11px;
-}
 .icones-navBar {
   display: flex;
   justify-content: space-between;
@@ -107,7 +109,7 @@ body {
   border-radius: 32px;
 }
 
-.stories-box {
+.stories {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -118,13 +120,6 @@ body {
   margin-top: 88px;
   background-color: white;
   border: 1px solid #dbdbdb;
-}
-
-.stories {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: white;
   font-size: 12px;
 }
 
@@ -400,12 +395,6 @@ body {
   color: #c7c7c7;
 }
 
-ion-icon {
-  margin: 0 8px;
-  width: 24px;
-  height: 24px;
-}
-
 .negrito {
   font-weight: bold;
 }
@@ -419,24 +408,40 @@ ion-icon {
 }
 
 @media (max-width: 613px) {
+  .stories {
+    max-width: 100vw;
+    margin-top: 54px;
+    background-color: unset;
+    overflow: scroll;
+  }
+
+  .sideBar {
+    display: none;
+  }
+  .divApp {
+    width: 100%;
+  }
   body {
     width: 100%;
     height: auto;
     flex-direction: column;
     margin-bottom: 54px;
   }
+  .hoot {
+    width: 100%;
+  }
   .corpo {
     width: 100%;
   }
-  .principal {
+  .princial {
     width: 100%;
   }
+
   .navBar {
     display: none;
   }
   .navBar-mobile {
     display: flex;
-    width: 100%;
   }
   .bot-mobile {
     display: flex;
@@ -444,17 +449,6 @@ ion-icon {
   }
   .flecha {
     display: none;
-  }
-
-  .stories-box {
-    width: 100%;
-    margin-top: 54px;
-    background-color: unset;
-    overflow-x: auto;
-  }
-
-  .stories {
-    background-color: unset;
   }
 
   .feed {
@@ -471,8 +465,5 @@ ion-icon {
   }
   .foto-feed img {
     width: 100%;
-  }
-  .sideBar {
-    display: none;
   }
 }

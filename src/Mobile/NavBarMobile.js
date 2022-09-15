@@ -1,11 +1,12 @@
 import { LogoInstagram, PaperPlaneOutline } from "react-ionicons";
+import logo from "../imgs/logo.png";
 
 export default function NavBarMobile() {
   return (
     <div class="navBar-mobile">
-      <LogoInstagram class="icone-navBar" />
-      <img src="./imgs/logo.png" />
-      <PaperPlaneOutline class="icone-navBar" />
+      <LogoInstagram />
+      <img src={logo} />
+      <PaperPlaneOutline />
     </div>
   );
 }

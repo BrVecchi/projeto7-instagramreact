@@ -4,7 +4,7 @@ import Corpo from "./Corpo";
 
 export default function App() {
   return (
-    <div>
+    <div class="divApp">
       <NavBar />
       <NavBarMobile />
       <Corpo />
