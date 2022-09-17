@@ -221,6 +221,10 @@ body {
   margin-left: 16px;
 }
 
+.strong {
+  font-weight: bold;
+}
+
 .curtidas-feed img {
   margin-right: 8px;
 }
@@ -326,7 +330,7 @@ body {
   margin-left: 14px;
 }
 .usuario-principal-texto-user {
-  font-weight: 500;
+  font-weight: 700;
 }
 .usuario-principal-texto-name {
   color: #8e8e8e;
@@ -363,7 +367,7 @@ body {
   margin-left: 14px;
 }
 .usuario-sugerido-info p:nth-child(1) {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
 }
 
@@ -379,7 +383,7 @@ body {
 
 .sugestoes p:nth-child(2) {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .seguir {
