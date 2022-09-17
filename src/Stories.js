@@ -9,70 +9,34 @@ import filoModerna from "./imgs/filomoderna 1.png";
 import memeRiaGourmet from "./imgs/memeriagourmet 1.png";
 import flecha from "./imgs/chevron-forward-circle 1 (2).png";
 
+function Story(props) {
+  return (
+    <li class="story">
+      <div class="stories-img">
+        <img class="story-img" src={props.imagem} />
+        <img class="circulo-stories" src={circuloStories} />
+      </div>
+      <p>{props.texto}</p>
+    </li>
+  );
+}
+
 export default function Stories() {
   const stories = [
-    <div class="story">
-      <div class="stories-img">
-        <img class="story-img" src={nineGag} />
-        <img class="circulo-stories" src={circuloStories} />
-      </div>
-      <p>9gag</p>
-    </div>,
-    <div class="story">
-      <div class="stories-img">
-        <img class="story-img" src={meowed} />
-        <img class="circulo-stories" src={circuloStories} />
-      </div>
-      <p>meowed</p>
-    </div>,
-    <div class="story">
-      <div class="stories-img">
-        <img class="story-img" src={barked} />
-        <img class="circulo-stories" src={circuloStories} />
-      </div>
-      <p>barked</p>
-    </div>,
-    <div class="story">
-      <div class="stories-img">
-        <img class="story-img" src={nathan} />
-        <img class="circulo-stories" src={circuloStories} />
-      </div>
-      <p>nathanwpyle...</p>
-    </div>,
-    <div class="story">
-      <div class="stories-img">
-        <img class="story-img" src={wawawi} />
-        <img class="circulo-stories" src={circuloStories} />
-      </div>
-      <p>wawawiwac...</p>
-    </div>,
-    <div class="story">
-      <div class="stories-img">
-        <img class="story-img" src={respondeAi} />
-        <img class="circulo-stories" src={circuloStories} />
-      </div>
-      <p>respondeai</p>
-    </div>,
-    <div class="story">
-      <div class="stories-img">
-        <img class="story-img" src={filoModerna} />
-        <img class="circulo-stories" src={circuloStories} />
-      </div>
-      <p>filomoderna</p>
-    </div>,
-    <div class="story">
-      <div class="stories-img">
-        <img class="story-img" src={memeRiaGourmet} />
-        <img class="circulo-stories" src={circuloStories} />
-      </div>
-      <p>memeriago.</p>
-    </div>,
+    { imagem: nineGag, texto: "9gag" },
+    { imagem: meowed, texto: "meowed" },
+    { imagem: barked, texto: "barked" },
+    { imagem: nathan, texto: "nathanwpyle..." },
+    { imagem: wawawi, texto: "wawawiwac..." },
+    { imagem: respondeAi, texto: "respondeai" },
+    { imagem: filoModerna, texto: "filomoderna" },
+    { imagem: memeRiaGourmet, texto: "memeriago" },
   ];
   return (
     <ul class="stories">
       <img class="flecha" src={flecha} />
       {stories.map((story) => (
-        <li>{story}</li>
+        <Story imagem={story.imagem} texto={story.texto} />
       ))}
     </ul>
   );

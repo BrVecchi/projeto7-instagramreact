@@ -188,6 +188,10 @@ body {
   border-radius: 32px;
 }
 
+.nome-lapis {
+  display: flex;
+}
+
 .foto-feed {
   height: auto;
 }
@@ -321,10 +325,10 @@ body {
   font-size: 14px;
   margin-left: 14px;
 }
-.usuario-principal-info p:nth-child(1) {
+.usuario-principal-texto-user {
   font-weight: 500;
 }
-.usuario-principal-info p:nth-child(2) {
+.usuario-principal-texto-name {
   color: #8e8e8e;
 }
 
