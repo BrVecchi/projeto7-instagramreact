@@ -335,6 +335,11 @@ body {
 .usuario-principal-texto-name {
   color: #8e8e8e;
 }
+.usuario-principal-img {
+  height: 46px;
+  width: 46px;
+  border-radius: 46px;
+}
 
 .sugestoes {
   display: flex;
