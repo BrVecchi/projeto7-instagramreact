@@ -4,10 +4,7 @@ import {
   EllipsisHorizontalOutline,
   HappyOutline,
   Heart,
-  HeartCircle,
-  HeartDislike,
   HeartOutline,
-  HeartSharp,
   PaperPlaneOutline,
 } from "react-ionicons";
 
@@ -23,23 +20,30 @@ import gatoTelefone from "./imgs/feed/gato-telefone 1.png";
 import React from "react";
 
 function PostImg(props) {
-  const [coracao, setCoracao] = React.useState("black")
-  const [favoritos, setFavoritos] = React.useState("black")
-  const [curtidas, setCurtidas] = React.useState(props.likeQtt)
+  const [visibilidadeVazio, setVisibilidadeVazio] = React.useState("");
+  const [visibilidadeCheio, setVisibilidadeCheio] = React.useState("hidding");
+  const [favoritos, setFavoritos] = React.useState("black");
+  const [curtidas, setCurtidas] = React.useState(props.likeQtt);
 
-  function mudarCorCoracao() {
-    if(coracao === "black") {
-      setCoracao("red")
-    } else {
-      setCoracao("black")
+  function preencherCoracao() {
+    if (visibilidadeVazio === "") {
+      setVisibilidadeVazio("hidding");
+      setVisibilidadeCheio("");
+    }
+  }
+
+  function esvaziarCoracao() {
+    if (visibilidadeCheio === "") {
+      setVisibilidadeCheio("hidding");
+      setVisibilidadeVazio("");
     }
   }
 
   function mudarCorFavoritos() {
-    if(favoritos === "black") {
-      setFavoritos("yellow")
+    if (favoritos === "black") {
+      setFavoritos("yellow");
     } else {
-      setFavoritos("black")
+      setFavoritos("black");
     }
   }
 
@@ -60,19 +64,34 @@ function PostImg(props) {
       <div class="bot-feed">
         <div class="icones-feed">
           <div class="icones-feed-esquerda">
-            <HeartOutline color={coracao} onClick={() => mudarCorCoracao()}/>
+            <Heart
+              color={"red"}
+              cssClasses={visibilidadeCheio}
+              onClick={() => esvaziarCoracao()}
+            />
+            <HeartOutline
+              cssClasses={visibilidadeVazio}
+              onClick={() => preencherCoracao()}
+            />
             <ChatbubbleOutline />
             <PaperPlaneOutline />
           </div>
           <div class="icones-feed-direita">
-            <BookmarkOutline color={favoritos} onClick={() => mudarCorFavoritos()} />
+            <BookmarkOutline
+              color={favoritos}
+              onClick={() => mudarCorFavoritos()}
+            />
           </div>
         </div>
         <div class="curtidas-feed">
           <img src={props.likeImg} />
           <div class="texto">
             Curtido por <span class="strong">{props.likeText}</span> e{" "}
-            <span class="strong">outras {(coracao === "black" ? curtidas : Number(curtidas)+0.001 )} pessoas</span>
+            <span class="strong">
+              outras{" "}
+              {visibilidadeVazio === "" ? curtidas : Number(curtidas) + 0.001}{" "}
+              pessoas
+            </span>
           </div>
         </div>
       </div>
@@ -104,23 +123,23 @@ function PostImg(props) {
 }
 
 function PostVideo(props) {
-  const [coracao, setCoracao] = React.useState("black")
-  const [favoritos, setFavoritos] = React.useState("black")
-  const [curtidas, setCurtidas] = React.useState(props.likeQtt)
+  const [coracao, setCoracao] = React.useState("black");
+  const [favoritos, setFavoritos] = React.useState("black");
+  const [curtidas, setCurtidas] = React.useState(props.likeQtt);
 
   function mudarCorCoracao() {
-    if(coracao === "black") {
-      setCoracao("red")
+    if (coracao === "black") {
+      setCoracao("red");
     } else {
-      setCoracao("black")
+      setCoracao("black");
     }
   }
 
   function mudarCorFavoritos() {
-    if(favoritos === "black") {
-      setFavoritos("yellow")
+    if (favoritos === "black") {
+      setFavoritos("yellow");
     } else {
-      setFavoritos("black")
+      setFavoritos("black");
     }
   }
   return (
@@ -135,28 +154,34 @@ function PostVideo(props) {
         <EllipsisHorizontalOutline />
       </div>
       <div class="foto-feed">
-          <video width="100%" autoPlay muted>
-            <source src={props.videomp4} type="video/mp4" />
-            <source src={props.videoogg} type="video/ogg" />
-            Your browser does not support HTML video.
-          </video>
-        </div>
+        <video width="100%" autoPlay muted>
+          <source src={props.videomp4} type="video/mp4" />
+          <source src={props.videoogg} type="video/ogg" />
+          Your browser does not support HTML video.
+        </video>
+      </div>
       <div class="bot-feed">
         <div class="icones-feed">
           <div class="icones-feed-esquerda">
-          <HeartOutline color={coracao} onClick={() => mudarCorCoracao()}/>
+            <HeartOutline color={coracao} onClick={() => mudarCorCoracao()} />
             <ChatbubbleOutline />
             <PaperPlaneOutline />
           </div>
           <div class="icones-feed-direita">
-          <BookmarkOutline color={favoritos} onClick={() => mudarCorFavoritos()} />
+            <BookmarkOutline
+              color={favoritos}
+              onClick={() => mudarCorFavoritos()}
+            />
           </div>
         </div>
         <div class="curtidas-feed">
           <img src={props.likeImg} />
           <div class="texto">
             Curtido por <span class="strong">{props.likeText}</span> e{" "}
-            <span class="strong">outras {(coracao === "black" ? curtidas : Number(curtidas)+0.001 )} pessoas</span>
+            <span class="strong">
+              outras {coracao === "black" ? curtidas : Number(curtidas) + 0.001}{" "}
+              pessoas
+            </span>
           </div>
         </div>
       </div>
@@ -212,7 +237,8 @@ export default function Posts() {
   ];
 
   const postsVideo = [
-    {userImg: ursocrazy,
+    {
+      userImg: ursocrazy,
       text: "crazybear",
       videomp4: videoMP4,
       videoogg: videoOGG,
@@ -220,13 +246,37 @@ export default function Posts() {
       likeText: "loucuratotales",
       likeQtt: "98.432",
       userComment: "Alguém",
-      textComment: "Que vídeo bacana! =O"}
-  ]
+      textComment: "Que vídeo bacana! =O",
+    },
+  ];
 
   return (
     <div class="posts">
-      {postsVideo.map((post) => <PostVideo userImg= {post.userImg} text= {post.text} videomp4= {post.videomp4} videoogg= {post.videoogg} likeImg= {post.likeImg} likeText= {post.likeText} likeQtt= {post.likeQtt} userComment= {post.userComment} textComment= {post.textComment}/>)}
-      {postsImg.map((post) => <PostImg userImg= {post.userImg} text= {post.text} feedImg= {post.feedImg} likeImg= {post.likeImg} likeText= {post.likeText} likeQtt= {post.likeQtt} userComment= {post.userComment} textComment= {post.textComment}/>)}
+      {postsVideo.map((post) => (
+        <PostVideo
+          userImg={post.userImg}
+          text={post.text}
+          videomp4={post.videomp4}
+          videoogg={post.videoogg}
+          likeImg={post.likeImg}
+          likeText={post.likeText}
+          likeQtt={post.likeQtt}
+          userComment={post.userComment}
+          textComment={post.textComment}
+        />
+      ))}
+      {postsImg.map((post) => (
+        <PostImg
+          userImg={post.userImg}
+          text={post.text}
+          feedImg={post.feedImg}
+          likeImg={post.likeImg}
+          likeText={post.likeText}
+          likeQtt={post.likeQtt}
+          userComment={post.userComment}
+          textComment={post.textComment}
+        />
+      ))}
     </div>
   );
 }

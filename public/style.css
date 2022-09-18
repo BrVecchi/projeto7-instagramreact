@@ -407,6 +407,10 @@ body {
   font-weight: bold;
 }
 
+.hidding {
+  display: none;
+}
+
 @media (max-width: 935px) {
   .box-sideBar,
   .sideBar {
