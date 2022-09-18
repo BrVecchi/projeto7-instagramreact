@@ -3,7 +3,11 @@ import {
   ChatbubbleOutline,
   EllipsisHorizontalOutline,
   HappyOutline,
+  Heart,
+  HeartCircle,
+  HeartDislike,
   HeartOutline,
+  HeartSharp,
   PaperPlaneOutline,
 } from "react-ionicons";
 
@@ -16,8 +20,29 @@ import dog from "./imgs/feed/dog 1.png";
 import adorableAnimals from "./imgs/usuarios/adorableanimals 2.png";
 import meowed from "./imgs/topo-feed/meowed 2.png";
 import gatoTelefone from "./imgs/feed/gato-telefone 1.png";
+import React from "react";
 
 function PostImg(props) {
+  const [coracao, setCoracao] = React.useState("black")
+  const [favoritos, setFavoritos] = React.useState("black")
+  const [curtidas, setCurtidas] = React.useState(props.likeQtt)
+
+  function mudarCorCoracao() {
+    if(coracao === "black") {
+      setCoracao("red")
+    } else {
+      setCoracao("black")
+    }
+  }
+
+  function mudarCorFavoritos() {
+    if(favoritos === "black") {
+      setFavoritos("yellow")
+    } else {
+      setFavoritos("black")
+    }
+  }
+
   return (
     <div class="feed">
       <div class="topo-feed">
@@ -35,19 +60,19 @@ function PostImg(props) {
       <div class="bot-feed">
         <div class="icones-feed">
           <div class="icones-feed-esquerda">
-            <HeartOutline />
+            <HeartOutline color={coracao} onClick={() => mudarCorCoracao()}/>
             <ChatbubbleOutline />
             <PaperPlaneOutline />
           </div>
           <div class="icones-feed-direita">
-            <BookmarkOutline />
+            <BookmarkOutline color={favoritos} onClick={() => mudarCorFavoritos()} />
           </div>
         </div>
         <div class="curtidas-feed">
           <img src={props.likeImg} />
           <div class="texto">
             Curtido por <span class="strong">{props.likeText}</span> e{" "}
-            <span class="strong">outras {props.likeQtt} pessoas</span>
+            <span class="strong">outras {(coracao === "black" ? curtidas : Number(curtidas)+0.001 )} pessoas</span>
           </div>
         </div>
       </div>
@@ -79,6 +104,25 @@ function PostImg(props) {
 }
 
 function PostVideo(props) {
+  const [coracao, setCoracao] = React.useState("black")
+  const [favoritos, setFavoritos] = React.useState("black")
+  const [curtidas, setCurtidas] = React.useState(props.likeQtt)
+
+  function mudarCorCoracao() {
+    if(coracao === "black") {
+      setCoracao("red")
+    } else {
+      setCoracao("black")
+    }
+  }
+
+  function mudarCorFavoritos() {
+    if(favoritos === "black") {
+      setFavoritos("yellow")
+    } else {
+      setFavoritos("black")
+    }
+  }
   return (
     <div class="feed">
       <div class="topo-feed">
@@ -100,19 +144,19 @@ function PostVideo(props) {
       <div class="bot-feed">
         <div class="icones-feed">
           <div class="icones-feed-esquerda">
-            <HeartOutline />
+          <HeartOutline color={coracao} onClick={() => mudarCorCoracao()}/>
             <ChatbubbleOutline />
             <PaperPlaneOutline />
           </div>
           <div class="icones-feed-direita">
-            <BookmarkOutline />
+          <BookmarkOutline color={favoritos} onClick={() => mudarCorFavoritos()} />
           </div>
         </div>
         <div class="curtidas-feed">
           <img src={props.likeImg} />
           <div class="texto">
             Curtido por <span class="strong">{props.likeText}</span> e{" "}
-            <span class="strong">outras {props.likeQtt} pessoas</span>
+            <span class="strong">outras {(coracao === "black" ? curtidas : Number(curtidas)+0.001 )} pessoas</span>
           </div>
         </div>
       </div>
