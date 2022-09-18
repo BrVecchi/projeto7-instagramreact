@@ -61,7 +61,16 @@ export default function PostVideo(props) {
         <EllipsisHorizontalOutline />
       </div>
       <div class="foto-feed">
-        <video width="100%" autoPlay muted>
+        <video
+          width="100%"
+          autoPlay
+          muted
+          onDoubleClick={() => {
+            if (visibilidadeCoracaoCheio !== "") {
+              preencherCoracao();
+            }
+          }}
+        >
           <source src={props.videomp4} type="video/mp4" />
           <source src={props.videoogg} type="video/ogg" />
           Your browser does not support HTML video.

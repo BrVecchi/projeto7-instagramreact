@@ -61,7 +61,14 @@ export default function PostImg(props) {
         <EllipsisHorizontalOutline />
       </div>
       <div class="foto-feed">
-        <img src={props.feedImg} />
+        <img
+          src={props.feedImg}
+          onDoubleClick={() => {
+            if (visibilidadeCoracaoCheio !== "") {
+              preencherCoracao();
+            }
+          }}
+        />
       </div>
       <div class="bot-feed">
         <div class="icones-feed">

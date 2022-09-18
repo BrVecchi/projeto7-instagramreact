@@ -1,13 +1,3 @@
-import {
-  BookmarkOutline,
-  ChatbubbleOutline,
-  EllipsisHorizontalOutline,
-  HappyOutline,
-  Heart,
-  HeartOutline,
-  PaperPlaneOutline,
-} from "react-ionicons";
-
 import videoMP4 from "./videos/video.mp4";
 import videoOGG from "./videos/video.ogg";
 import ursocrazy from "./imgs/topo-feed/ursocrazy 2.png";
